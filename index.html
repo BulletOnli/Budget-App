@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/effd3867de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="inputSection">
+        <div class="inputContainer">
+            <p>Enter allocated Budget</p>
+            <input class="inputBudget" type="number">
+            <button class="addBudgetBtn">Add Budget</button>
+        </div>
+        <div class="inputContainer">
+            <p>Manually Save money</p>
+            <input class="inputSavings" type="number">
+            <button class="saveBtn">Add to Savings</button>
+            <span class="errorMessage">Error! Try Again</span>
+        </div>
+        <div class="inputContainer">
+            <p>What did you spend?</p>
+            <input class="inputExpenseTitle" type="text">
+            <p>Amount Spent</p>
+            <input class="inputAmountSpent" type="number">
+            <button class="AddExpenseBtn">Add to Expenses</button>
+        </div>
+        <div class="inputContainer">
+            <p>Withdraw from savings</p>
+            <input class="inputWithdraw" type="number">
+            <button class="withdrawBtn">Withdraw</button>
+        </div>
+    </div>
+
+    <div class="mainContianer">
+        <div class="financeSection">
+            <div class="moneyContainer">
+                <h2>Total Budget</h2>
+                <p class="totalBudget">0</p>
+            </div>
+            <div class="moneyContainer">
+                <h2>Total Expenses</h2>
+                <p class="totalExpense">0</p>
+            </div>
+            <div class="moneyContainer">
+                <h2>Savings</h2>
+                <small>Auto save 10% from the added money</small>
+                <p class="savings">0</p>
+            </div>
+            <div class="moneyContainer">
+                <h2>Balance</h2>
+                <p class="balance">0</p>
+            </div>
+        </div>
+
+        <div class="historySection">
+            <div class="expenseSection">
+                <h1>Expenses</h1>
+                <div class="expensesContainer"></div>
+            </div>
+            <div class="withdrawalSection">
+                <h1>Withdrawals</h1>
+                <div class="withdrawalContainer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

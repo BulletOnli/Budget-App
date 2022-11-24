@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;700;800;900&family=Shrikhand&family=Silkscreen&display=swap');
+
+$darkOrange: #F4A261;
+$lightOrange: #e9c46a;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.inputSection {
+    width: 27%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 2px solid black;
+    background-color: $darkOrange;
+
+    
+    .inputContainer {
+        width: 20rem;
+        background-color: $lightOrange;
+        box-shadow: 0 1px 7px 1px rgba(0, 0, 0, 0.4);
+        border: 2px solid black;
+        padding: 12px;
+        margin: 5px 0;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+        p {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        input {
+            font-size: 18px;
+            font-weight: 600;
+            padding: 3px 10px;
+            margin: 10px 0;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: $darkOrange;
+            outline: none;
+
+            &::-webkit-inner-spin-button {
+                appearance: none;
+                -webkit-appearance: none;
+            }
+        }
+
+        button {
+            width: fit-content;
+            font-size: 14px;
+            font-weight: 800;
+            padding: 3px 10px;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: darken($darkOrange, 6%);
+
+            &:hover {
+                scale: 1.02;
+                background-color: darken($darkOrange, 10%);
+            }
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 700;
+            color: red;
+            position: absolute;
+            bottom: 17px;
+            right: 50px;
+            display: none;
+        }
+    }
+}
+
+
+.mainContianer {
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    background-color: $lightOrange;
+
+    .financeSection {
+        width: 100%;
+        padding: 25px 10px 10px 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        .moneyContainer {
+            width: 15rem;
+            height: 10rem;
+            background-color: $darkOrange;
+            border: 2px solid black;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            h3 {
+                font-weight: 800;
+            }
+
+            small {
+                font-size: 11px;
+                font-weight: 500;
+                bottom: 1px;
+                position: absolute;
+            }
+
+            p {
+                width: 100%;
+                height: 100%;
+                font-size: 3.5rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .historySection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    
+        .expenseSection {
+            width: 50%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .expensesContainer {
+                width: 28rem;
+                height: 32rem;
+                margin-top: 10px;
+                padding: 10px 40px;
+                background-color: $darkOrange;
+                border: 2px solid black;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+
+                .expenseTitle {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 5px 0;
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+            }
+        }
+    
+        .withdrawalSection {
+            @extend .expenseSection;
+        
+            .withdrawalContainer {
+                @extend .expensesContainer;
+                align-items: center;
+                
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+
+
